@@ -1,0 +1,64 @@
+/* ===== 安全的小红书风（不破坏游戏）===== */
+
+body {
+  background: #ffe4ec;
+}
+
+/* 卡片效果 */
+.wrapper {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255,100,150,0.2);
+}
+
+/* 新首页（不会影响游戏） */
+.new-home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+}
+
+.home-title {
+  font-size: 28px;
+  color: #ff4d8d;
+  margin-bottom: 30px;
+}
+
+.start-btn-new {
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #ff7eb3, #ff4d8d);
+  color: #fff;
+  cursor: pointer;
+}
+/* ===== 点击动画 ===== */
+
+.pic-box {
+  transition: transform 0.15s ease;
+}
+
+.pic-box:active {
+  transform: scale(1.2);
+}
+
+/* 选中状态更明显 */
+.pic-box.active {
+  transform: scale(1.15);
+}
+
+/* 消除动画（淡出） */
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
